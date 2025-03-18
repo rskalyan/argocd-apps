@@ -1,0 +1,60 @@
+apiVersion: v1
+data:
+  activitylogsvc_grpc_addr: activitylogsvc:9090
+  cache.rq.expiration_minutes: "60"
+  cache.ugp.expiration_minutes: "1"
+  cluster-domain: rms.va.main.ag1.axon.us
+  config.caching.expirationMins: "1"
+  config.grpc.addr: configsvc:9090
+  configsvc_grpc_addr: configsvc:9090
+  documentsvc_grpc_addr: documentsvc:9090
+  environment: ag1
+  environment_code: q
+  grpc.addr: permit:9090
+  grpc.config.addr: configsvc:9090
+  grpc.configsync.addr: configsync:9090
+  grpc.dataexport.addr: dataexportsvc:9090
+  grpc.default_compression_algorithm: "2"
+  grpc.default_compression_level: "3"
+  grpc.max_receive_size_mb: "128"
+  grpc.records.addr: records:9090
+  grpc.retry.exponential_interval_ms: "100"
+  grpc.retry.max_retries: "5"
+  grpc.rq.addr: rq:9090
+  grpc.rqmgmt.addr: rq:9090
+  grpc.themis.addr: themis:9090
+  grpc.uac.addr: uac:9090
+  grpc.ugp.addr: ugp-authz:9090
+  healthcheck.namespace: zeke
+  healthcheck.partnerID: e196748c-50fc-43d0-8538-3788a259f50d
+  ingress-host-name: '*.ag1.evidence.com'
+  instrumentation.enabled: "true"
+  instrumentation.ocagent_addr: ocagent.kube-system:55678
+  instrumentation.trace_sampling_rate: "0.01"
+  istio-cluster-domain: istio.rms.va.main.ag1.axon.us
+  kache.type: local-memory
+  local-cluster-domain: rms.svc.cluster.local
+  log.format: json
+  log.level: info
+  masterbranchid: 00000000-0000-0000-0000-000000000000
+  records_grpc_addr: records:9090
+  request_log: |-
+    enabled: true
+    services:
+      grpc.health.v1.Health:
+        enabled: false
+      permit.Permit:
+        enabled: true
+  rq_grpc_addr: rq:9090
+  schemastorus_grpc_addr: schemastorus:7777
+  trace_sampling_rate: "0.01"
+  ugp.grpc.max_receive_size_mb: "16"
+  ugp_authz_grpc_addr: ugp-authz:9090
+  zeke.grpc.addr: zeke:9090
+kind: ConfigMap
+metadata:
+  labels:
+    app: permit
+    app.kubernetes.io/name: argocd-cm
+    app.kubernetes.io/part-of: argocd
+  name: permit-d22b8b52b7
