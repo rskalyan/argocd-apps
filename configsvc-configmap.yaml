@@ -21,7 +21,7 @@ data:
   grpc.retry.exponential_interval_ms: "100"
   grpc.retry.max_retries: "5"
   grpc.rq.addr: tasks:9090
-  grpc.rqmgmt.addr: rq:9090
+  grpc.rqmgmt.addr: tasks:9090
   grpc.themis.addr: themis:9090
   grpc.uac.addr: uac:9090
   grpc.ugp.addr: ugp-authz:9090
