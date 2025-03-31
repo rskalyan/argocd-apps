@@ -26,6 +26,7 @@ data:
   grpc.uac.addr: uac:9090
   grpc.ugp.addr: ugp-authz:9090
   healthcheck.namespace: zeke
+  mysql.address: 2
   healthcheck.partnerID: e196748c-50fc-43d0-8538-3788a259f50d
   ingress-host-name: '*.ag1.evidence.com'
   instrumentation.enabled: "true"
